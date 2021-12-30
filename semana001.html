@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="bola-de-futebol.png">
+    <style>
+        #palpitesform {
+            text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            margin: 0;
+            display: flex;
+            color: #168106;
+            min-height: 100vh;
+            justify-content: center;
+        }
+
+        #palpitesform,
+        input {
+            color: #fff;
+            font-weight: 600;
+            display: block;
+            margin-top: 2px;
+            justify-content: center;
+        }
+
+        #palpitesform,
+        label {
+            background-color: #23B345;
+            margin-left: 25px;
+            justify-content: center;
+        }
+
+        input {
+            color: #000;
+            margin-left: 25px;
+            justify-content: center;
+        }
+
+        .headersemana {
+            color: #22a10e;
+            text-align: center;
+            font-family: 'Aldrich', sans-serif;
+        }
+
+        .enviar {
+
+            margin-left: 150px;
+        }
+    </style>
+    <title>Semana 001</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="./ball.png" alt="logo" class="logo">
+            <nav>
+                <ul id="menuList" style="max-height: 170px;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="regulamento.html">Regulamento</a></li>
+                    <li><a href="classificacao.html">Ranking</a></li>
+                </ul>
+            </nav>
+            <img src="./menu.png" alt="menu" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <h1 class="headersemana">Semana 001 (08/01 a 10/01)</h1>
+        <section id="palpitesform">
+            <form action="https://formsubmit.co/thiagosgagliari@gmail.com" method="POST">
+                <label for="nome">Seu Nome</label>
+                <input type="text" name="name" required><br><br>
+                <label for="jogo1">Real Madrid x Valencia</label>
+                <input type="text" name="jogo1" required><br>
+                <label for="jogo2">Santa Clara x Sporting</label>
+                <input type="text" name="jogo2" required><br>
+                <label for="jogo3">Leipzig x Mainz</label>
+                <input type="text" name="jogo3" required><br>
+                <label for="jogo4">Real Sociedad x Celta</label>
+                <input type="text" name="jogo4" required><br>
+                <label for="jogo4">Benfica x Paços Ferreira</label>
+                <input type="text" name="jogo5" required><br>
+                <label for="jogo4">Lille x Lorient</label>
+                <input type="text" name="jogo6" required><br><br>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://palpite.epizy.com/obrigado.html">
+
+                <button class="enviar" type="submit">Enviar Palpites</button>
+            </form>
+        </section>
+        <script>
+
+            var menuList = document.getElementById("menuList");
+
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu() {
+
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "130px";
+                }
+                else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+
+        </script>
+</body>
